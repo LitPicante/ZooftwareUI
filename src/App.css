@@ -1,38 +1,81 @@
-.App {
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 10px;
+  background-color: #e0e0e0; /* Fondo gris suave */
+}
+
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fdfdfd; /* Fondo blanco suave */
+  overflow-y: auto;
+}
+
+.welcome-message {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome-message h1 {
+  font-size: 36px;
+  color: #333; /* Un color gris oscuro */
+  opacity: 0.6; /* Opacidad ligera para darle un toque sutil */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chat-response {
+  padding: 10px;
+  background-color: #d0eaff; /* Azul claro más suave */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-area {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  background-color: #3a3a3a; /* Gris oscuro, pero no negro */
+  border-radius: 50px;
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto 20px auto; /* Centrado horizontal */
+}
+
+.input-box {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #4a4a4a; /* Gris medio */
+  color: white;
+  font-size: 16px;
+  outline: none;
+  height: auto;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.send-button {
+  margin-left: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send-button:hover {
+  background-color: #555; /* Cambio de fondo gris oscuro al hacer hover */
 }
