@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
-import '../App.css';  // Si tienes tu CSS en App.css o DiagnosticoForm.css
-
+import axios from 'axios'; // Importa axios
+import '../App.css';
 import { FaPaperPlane } from 'react-icons/fa';
 
 function DiagnosticoForm() {
   const [sintomas, setSintomas] = useState('');
   const [respuesta, setRespuesta] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simular la respuesta de la IA
-    setRespuesta("Diagnóstico sugerido: IA responderá aquí.");
-    setSintomas(''); // Limpiar el cuadro de texto después de enviar
+
+    try {
+      // Enviar el prompt al backend
+      const res = await axios.post('http://localhost:8000/api/chat/', {
+        prompt: sintomas,
+      });
+
+      // Establecer la respuesta obtenida de la IA
+      setRespuesta(res.data.message);
+    } catch (error) {
+      console.error("Error al obtener respuesta de la IA:", error);
+      setRespuesta("Error al obtener respuesta de la IA. Inténtalo nuevamente.");
+    }
+
+    // Limpiar el cuadro de texto después de enviar
+    setSintomas('');
   };
 
   return (
@@ -36,7 +49,7 @@ function DiagnosticoForm() {
           placeholder="Introduce una petición aquí"
           rows="1"
           className="input-box"
-          style={{ resize: 'none' }} // Evitar que el usuario pueda cambiar el tamaño manualmente
+          style={{ resize: 'none' }}
         />
         <button type="submit" className="send-button">
           <FaPaperPlane />

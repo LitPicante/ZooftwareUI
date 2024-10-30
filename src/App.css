@@ -4,7 +4,7 @@
   justify-content: space-between;
   height: 100vh;
   padding: 10px;
-  background-color: #e0e0e0; /* Fondo gris suave */
+  background-color: #333; /* Fondo gris suave */
 }
 
 .chat-box {
@@ -14,9 +14,9 @@
   flex-direction: column;
   justify-content: center; /* Centra el contenido verticalmente */
   align-items: center; /* Centra el contenido horizontalmente */
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 10px;
-  background-color: #fdfdfd; /* Fondo blanco suave */
+  background-color: #333; /* Fondo blanco suave */
   overflow-y: auto;
 }
 
