@@ -1,0 +1,111 @@
+/* Fondo gris oscuro para toda la página */
+body {
+    background-color: #1a1a1a; /* Gris muy oscuro */
+    color: #f1f1f1; /* Color de texto claro */
+    font-family: Arial, sans-serif;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 80vh;
+    justify-content: flex-end;
+  }
+  
+  .welcome-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .welcome-message h1 {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    text-align: center;
+  }
+  
+  /* Eliminamos fondo, borde y margen de .chat-box */
+  .chat-box {
+    width: 100%;
+    max-width: 600px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  /* Alineación de la respuesta y el perfil con el cuadro de entrada */
+  .chat-response {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .chat-response p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    background-color: #333;
+    padding: 0.8rem;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0;
+  }
+  
+  /* Caja de entrada en la parte inferior y centrada */
+  .input-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    position: fixed;
+    bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  .input-box {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .send-button {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    margin-left: -2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  
+  .send-button:hover {
+    color: #0056b3;
+  }
+  

@@ -1,81 +1,8 @@
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  padding: 10px;
-  background-color: #333; /* Fondo gris suave */
-}
-
-.chat-box {
-  flex: 1;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
-  border: 1px solid #333;
-  border-radius: 10px;
-  background-color: #333; /* Fondo blanco suave */
-  overflow-y: auto;
-}
-
-.welcome-message {
-  text-align: center;
-}
-
-.welcome-message h1 {
-  font-size: 36px;
-  color: #333; /* Un color gris oscuro */
-  opacity: 0.6; /* Opacidad ligera para darle un toque sutil */
-}
-
-.chat-response {
-  padding: 10px;
-  background-color: #d0eaff; /* Azul claro más suave */
-  border-radius: 10px;
-  margin-bottom: 10px;
-  max-width: 80%;
-}
-
-.input-area {
-  display: flex;
-  align-items: center;
-  background-color: #3a3a3a; /* Gris oscuro, pero no negro */
-  border-radius: 50px;
-  padding: 10px;
-  width: 60%;
-  margin: 0 auto 20px auto; /* Centrado horizontal */
-}
-
-.input-box {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 50px;
-  background-color: #4a4a4a; /* Gris medio */
-  color: white;
-  font-size: 16px;
-  outline: none;
-  height: auto;
-  max-height: 100px;
-  overflow: hidden;
-}
-
-.send-button {
-  margin-left: 10px;
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.send-button:hover {
-  background-color: #555; /* Cambio de fondo gris oscuro al hacer hover */
+/* Estilo global para fondo oscuro */
+body, .App {
+  background-color: #1a1a1a; /* Gris muy oscuro */
+  color: #f1f1f1; /* Color de texto claro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
