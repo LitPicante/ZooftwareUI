@@ -1,24 +1,171 @@
+/* Estilo general del navbar */
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333; /* Cambia el color de fondo si es necesario */
-    color: white;
-  }
-  
-  .navbar-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-logo {
-    height: 40px; /* Ajusta el tamaño del logo si es necesario */
-    cursor: pointer;
-  }
-  
-  .navbar-title {
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    color: white;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Sangría en los lados */
+  background-color: #333; /* Fondo oscuro del navbar */
+  color: white;
+  position: relative;
+  z-index: 1000; /* Asegurar que el navbar esté sobre el contenido */
+}
+
+/* Contenedor del logo y título */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaciado entre el logo y el título */
+  margin-left: 2rem; /* Aplicar la misma sangría que el ícono de perfil */
+}
+
+/* Logo */
+.navbar-logo {
+  height: 40px; /* Tamaño del logo */
+  cursor: pointer;
+}
+
+/* Título */
+.navbar-title {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0; /* Elimina cualquier margen vertical */
+}
+
+/* Contenedor del perfil */
+.profile-container {
+  position: relative;
+  margin-right: 2rem; /* Sangría para el ícono de perfil */
+}
+
+/* Ícono del perfil */
+.profile-icon {
+  font-size: 2rem; /* Tamaño del ícono */
+  color: white;
+  cursor: pointer;
+  border-radius: 50%; /* Hacer el ícono redondo */
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  display: none; /* Ocultar por defecto */
+  position: absolute;
+  top: 50px; /* Ajuste para posicionarlo debajo del navbar */
+  right: 0;
+  background-color: #2a2a2a !important; /* Fondo gris oscuro */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el menú */
+  padding: 0.5rem 0;
+  list-style: none;
+  text-align: left;
+  width: 200px;
+  z-index: 1000; /* Asegura que el menú esté encima de otros elementos */
+}
+
+/* Mostrar menú cuando está activo */
+.dropdown-menu.show {
+  display: block; /* Mostrar menú */
+}
+
+/* Estilo de los elementos del menú */
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  color: white; /* Color de texto blanco para buen contraste */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #3a3a3a; /* Un gris un poco más claro al pasar el mouse */
+}
+
+/* Íconos dentro del menú */
+.dropdown-icon {
+  font-size: 1.2rem;
+  color: #ddd; /* Íconos ligeramente más claros */
+}
+
+/* Línea divisoria */
+.dropdown-divider {
+  height: 1px;
+  background-color: #444; /* Línea divisoria un poco más oscura */
+  margin: 0.5rem 0;
+  border: none;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Ícono de conversaciones */
+.conversations-icon {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menú desplegable de conversaciones */
+.dropdown-menu {
+  display: none; /* Ocultar por defecto */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  list-style: none;
+  width: 250px;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.no-conversations {
+  padding: 1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.conversation-name {
+  flex: 1;
+  color: white;
+}
+
+.conversation-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.action-btn:hover {
+  color: #ddd;
+}
+
+.add-conversation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.add-conversation:hover {
+  background-color: #3a3a3a;
+}
+
+
